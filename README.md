@@ -17,3 +17,6 @@ The sample demonstrates how to use the webcam addon of Dynamic Web TWAIN. Since 
  3. Capture and upload images from a webcam in your web browsers.
  
     ![webcam capture in web browser](https://www.dynamsoft.com/blog/wp-content/uploads/2020/06/web-browser-webcam-capture.png)
+    
+## Blog
+[How to Build a PHP Webcam App Using Dynamic Web TWAIN Add-on](https://www.dynamsoft.com/blog/imaging/php-webcam-capture-web-twain/)
