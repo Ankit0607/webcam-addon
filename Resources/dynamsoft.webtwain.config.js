@@ -4,15 +4,16 @@
 //
 // Copyright 2020, Dynamsoft Corporation 
 // Author: Dynamsoft Team
-// Version: 15.3.1
+// Version: 16.0
 //
 /// <reference path="dynamsoft.webtwain.initiate.js" />
 var Dynamsoft = Dynamsoft || { WebTwainEnv: {} };
 
 ///
 Dynamsoft.WebTwainEnv.AutoLoad = true;
+
 ///
-Dynamsoft.WebTwainEnv.Containers = [{ ContainerId: 'dwtcontrolContainer', Width: '504px', Height: '600px' }];
+Dynamsoft.WebTwainEnv.Containers = [{ContainerId:'dwtcontrolContainer', Width:270, Height:350}];
 
 /////////////////////////////////////////////////////////////////////////////////////
 //  WARNING:  The productKey in this file is protected by copyright law            //
@@ -24,9 +25,11 @@ Dynamsoft.WebTwainEnv.Containers = [{ ContainerId: 'dwtcontrolContainer', Width:
 /////////////////////////////////////////////////////////////////////////////////////
 /// If you need to use multiple keys on the same server, you can combine keys and write like this 
 /// Dynamsoft.WebTwainEnv.ProductKey = 'key1;key2;key3';
-Dynamsoft.WebTwainEnv.ProductKey = 'LICENSE-KEY';
+Dynamsoft.WebTwainEnv.ProductKey = 't0073fQAAAEbXoxAgIKZCTHfvS2R66qFAPUUWs3p2BgR6+GU3XIwgHjm6/dsGmoMTlqt07KvaOpPIGtpyN5rwworv9mySvqAAH14Y0g==';
+
+
 ///
-Dynamsoft.WebTwainEnv.Trial = true;
+// Dynamsoft.WebTwainEnv.ResourcesPath = 'Resources';
 
 ///
 Dynamsoft.WebTwainEnv.IfAddMD5InUploadHeader = false;
@@ -34,8 +37,6 @@ Dynamsoft.WebTwainEnv.IfAddMD5InUploadHeader = false;
 ///
 Dynamsoft.WebTwainEnv.IfConfineMaskWithinTheViewer = false;
 
-///
-//Dynamsoft.WebTwainEnv.IfCheck64bitServiceFirst = true;
 
 ///
 /*Dynamsoft.WebTwainEnv.CustomizableDisplayInfo = {
@@ -46,6 +47,7 @@ Dynamsoft.WebTwainEnv.IfConfineMaskWithinTheViewer = false;
         ERR_MODULE_NOT_INSTALLED: 'Error: The Dynamic Web TWAIN module is not installed.',
         ERR_BROWSER_NOT_SUPPORT: 'Error: This browser is currently not supported.',
         ERR_CreateID_MustNotInContainers: 'Error: Duplicate ID detected for creating Dynamic Web TWAIN objects, please check and modify.',
+		ERR_CreateID_NotContainer: 'Error: The ID of the DIV for creating the new DWT object is invalid.',
         ERR_DWT_NOT_DOWNLOADED: 'Error: Failed to download the Dynamic Web TWAIN module.',
 
         // image view
@@ -131,8 +133,8 @@ Dynamsoft.WebTwainEnv.IfConfineMaskWithinTheViewer = false;
             'fit': true, 'fitw': true, 'fith': true,
             'hand': true, 'rectselect': true, 'zoom': true
         }
-    },
-
+	},
+	
     dialogText: {
         dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
         dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
@@ -140,14 +142,6 @@ Dynamsoft.WebTwainEnv.IfConfineMaskWithinTheViewer = false;
         selectSource: ['Select Source:', 'Select', 'Cancel', 'There is no source available!']
     }
 };*/
-
-(function(){
-    var p = document.location.protocol;
-    if (p !== 'https:' && p !== 'http:')
-		Dynamsoft.WebTwainEnv.ResourcesPath = 'https://demo.dynamsoft.com/DWT/Resources';
-	else
-		Dynamsoft.WebTwainEnv.ResourcesPath = 'Resources';
-})();
 
 
 /// All callbacks are defined in the dynamsoft.webtwain.install.js file, you can customize them.
